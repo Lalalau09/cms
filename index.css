@@ -8,19 +8,21 @@ body{
 }
 .portfolio-title{
     font-size:38px;
-    margin:0;
+    margin: 40px 0 0 0;
     text-align: center;
 }
 .portfolio-description{
     font-size:24px;
     margin:0;
-    text-align:center
+    text-align:center;
+    margin:7px 0 0 0;
+    
 }
 .portfolio-content{
     margin-top:20px;
     padding: 40px;
-    display:block;
-    gap:40px
+    display:grid;
+    gap: 40px
 }
 @media(min-width:960px){
     .portfolio-content{
@@ -35,9 +37,9 @@ body{
 }
 
 .portfolio-img{
-   height: 200px;
+   height: 255px;
    object-fit: cover;
-   width: auto
+   width: 100%
 
     
 }
@@ -47,10 +49,11 @@ body{
 .portfolio-card-title{
     font-size:30px;
     text-align:center;
-    margin: 40px 0 0 0
+    margin:0
+
 }
 .portfolio-card-text{
-    margin:7px 0 0 0;
+    margin:0;
     text-align: center;
     font-size:18px
 }
