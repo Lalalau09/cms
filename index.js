@@ -4,7 +4,7 @@ function addWorkCard(params = {}){
     template.content.querySelector(".portfolio-card-title").textContent = params.title
     template.content.querySelector(".portfolio-card-text").textContent = params.text
     template.content.querySelector(".portfolio-card-link").href = params.url
-    template.content.querySelector(".portfolio-img").src = params.img
+    //template.content.querySelector(".portfolio-img").src = params.img
 
     const clone= document.importNode (template.content, true)
     container.appendChild(clone)
@@ -16,9 +16,10 @@ function getWorks(){
     ).then((res)=>{
         return res.json()}
         ).then((data)=>{
-    const fieldCollection = data.items.map((item)=>{
+    const fieldCollection = data.fields.map((item)=>{
         return{
-            title:item.fields.titulo}
+            title:item.name,
+        }
 
     })
     return fieldCollection
@@ -28,7 +29,7 @@ function getWorks(){
 }
 function main(){
 getWorks().then(function(works){
-    console.log(works)
+    //console.log(works)
     for (const w of works ){
         addWorkCard(w)
     }
